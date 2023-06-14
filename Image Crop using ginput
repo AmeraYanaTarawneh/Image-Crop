@@ -5,7 +5,6 @@ figure;
 imshow(image);
 title('Original Image');
 
-% 
 disp('Select needed area');
 [x, y] = ginput(2);
 x1 = x(1);
@@ -17,10 +16,12 @@ y2 = y(2);
 width = abs(x2 - x1);
 height = abs(y2 - y1);
 
+
 % Crop 
 croppedImage = imcrop(image, [x1, y1, width, height]);
 
-% 
+
+
 figure;
 imshow(croppedImage);
 title('Cropped Image');
